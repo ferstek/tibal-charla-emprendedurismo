@@ -2,5 +2,8 @@
   "name": "tibal-charla",
   "buildCommand": null,
   "outputDirectory": ".",
-  "framework": null
+  "framework": null,
+  "routes": [
+    { "src": "/", "dest": "/presentacion-tibal.html" }
+  ]
 }
