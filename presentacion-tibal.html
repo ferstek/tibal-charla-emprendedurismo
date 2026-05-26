@@ -191,20 +191,28 @@ body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(
 .cpill { font-size: clamp(14px,1.5vw,18px); background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: 24px; padding: 10px 22px; color: rgba(253,250,245,0.7); }
 
 /* REDES */
-.s-redes { background: #0e0e0e; padding: 4vh 0 0 0; justify-content: flex-start; }
-.redes-top { display: flex; align-items: center; gap: 16px; padding: 0 5vw 2vh; flex-wrap: wrap; }
+.s-redes { background: #0e0e0e; padding: 4vh 4vw 4vh; justify-content: center; align-items: center; }
+.redes-top { display: flex; align-items: center; gap: 16px; margin-bottom: 3vh; flex-wrap: wrap; align-self: flex-start; }
 .redes-top .label { margin-bottom: 0; }
 .ig-badge { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); border-radius: 10px; padding: 6px 14px; font-size: clamp(13px,1.2vw,16px); color: white; font-weight: 500; letter-spacing: 0.02em; }
-.reels-row { display: flex; gap: 3px; width: 100%; flex: 1; min-height: 0; overflow: hidden; }
-.reel-clip { flex: 1; position: relative; overflow: hidden; background: #000; }
+.reels-row { display: flex; gap: 12px; justify-content: center; align-items: flex-start; width: 100%; }
+.reel-clip {
+  flex: none;
+  width: 16vw;
+  aspect-ratio: 9 / 16;
+  max-height: 68vh;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+  border-radius: 10px;
+}
 .reel-clip iframe {
   position: absolute;
   width: 100%;
-  height: calc(100% + 230px);
-  top: -62px;
+  height: calc(100% + 180px);
+  top: -65px;
   left: 0;
   border: none;
-  pointer-events: none;
   display: block;
 }
 </style>
