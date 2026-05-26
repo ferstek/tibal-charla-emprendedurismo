@@ -191,28 +191,35 @@ body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(
 .cpill { font-size: clamp(14px,1.5vw,18px); background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: 24px; padding: 10px 22px; color: rgba(253,250,245,0.7); }
 
 /* REDES */
-.s-redes { background: #0e0e0e; padding: 4vh 0 0 0; justify-content: flex-start; }
-.redes-top { display: flex; align-items: center; gap: 16px; padding: 0 5vw 2vh; flex-wrap: wrap; }
-.redes-top .label { margin-bottom: 0; }
-.ig-badge { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); border-radius: 10px; padding: 6px 14px; font-size: clamp(13px,1.2vw,16px); color: white; font-weight: 500; letter-spacing: 0.02em; }
-.reels-row { display: flex; gap: 0; width: 100%; }
-.reel-clip {
-  flex: 1;
-  height: 33vw;
-  max-height: 78vh;
-  position: relative;
-  overflow: hidden;
-  background: #0e0e0e;
+.s-redes { background: #0e0e0e; padding: 0; justify-content: flex-start; }
+.redes-bar {
+  display: flex; align-items: center; gap: clamp(16px,2vw,32px);
+  padding: 2.5vh 5vw; flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
 }
-.reel-clip iframe {
-  position: absolute;
-  width: 100%;
-  height: calc(100% + 210px);
-  top: -70px;
-  left: 0;
-  border: none;
-  display: block;
+.ig-avatar-ring {
+  width: clamp(48px,5vw,64px); height: clamp(48px,5vw,64px); border-radius: 50%;
+  background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+  padding: 2.5px; flex-shrink: 0;
 }
+.ig-avatar-inner {
+  width: 100%; height: 100%; border-radius: 50%;
+  background: #1a1a1a;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(12px,1.3vw,17px); font-weight: 700; color: white; letter-spacing: 0.03em;
+}
+.ig-name-row { display: flex; align-items: center; gap: 8px; }
+.ig-name { font-size: clamp(16px,1.8vw,22px); font-weight: 700; color: white; letter-spacing: 0.01em; }
+.ig-check { width: 18px; height: 18px; background: #0095f6; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ig-handle-sub { font-size: clamp(12px,1.1vw,14px); color: rgba(255,255,255,0.4); margin-top: 2px; }
+.ig-stats { display: flex; gap: clamp(20px,3vw,48px); margin-left: auto; }
+.ig-stat { text-align: center; }
+.ig-stat-n { font-size: clamp(18px,2vw,28px); font-weight: 700; color: white; line-height: 1.1; }
+.ig-stat-l { font-size: clamp(11px,0.9vw,13px); color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+.reels-row { display: flex; gap: 2px; flex: 1; min-height: 0; }
+.reel-clip { flex: 1; overflow: hidden; background: #000; }
+.reel-clip video { width: 100%; height: 100%; object-fit: cover; display: block; }
 </style>
 </head>
 <body>
@@ -389,19 +396,31 @@ body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(
 <!-- 8. REDES -->
 <section class="slide s-redes" id="s-redes">
   <div class="slide-num" style="color:rgba(253,250,245,0.3)">08 / 13</div>
-  <div class="redes-top">
-    <div class="label">Redes sociales</div>
-    <div class="ig-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
-      @tiendaballerina
+  <div class="redes-bar">
+    <div class="ig-avatar-ring">
+      <div class="ig-avatar-inner">TB</div>
+    </div>
+    <div>
+      <div class="ig-name-row">
+        <span class="ig-name">TIENDA BALLERINA</span>
+        <span class="ig-check">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </div>
+      <div class="ig-handle-sub">@tiendaballerina</div>
+    </div>
+    <div class="ig-stats">
+      <div class="ig-stat"><div class="ig-stat-n">203 mil</div><div class="ig-stat-l">seguidores</div></div>
+      <div class="ig-stat"><div class="ig-stat-n">855</div><div class="ig-stat-l">publicaciones</div></div>
+      <div class="ig-stat"><div class="ig-stat-n">479</div><div class="ig-stat-l">seguidos</div></div>
     </div>
   </div>
   <div class="reels-row">
-    <div class="reel-clip"><iframe data-src="https://www.instagram.com/reel/DYr3c4Kubb5/embed/?autoplay=1" src="" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
-    <div class="reel-clip"><iframe data-src="https://www.instagram.com/reel/DYp775luHTu/embed/?autoplay=1" src="" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
-    <div class="reel-clip"><iframe data-src="https://www.instagram.com/reel/DYXRFycOyTM/embed/?autoplay=1" src="" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
-    <div class="reel-clip"><iframe data-src="https://www.instagram.com/reel/DYUlb_QBspz/embed/?autoplay=1" src="" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
-    <div class="reel-clip"><iframe data-src="https://www.instagram.com/reel/DXbrkPgjuPl/embed/?autoplay=1" src="" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+    <div class="reel-clip"><video src="videos/reel1c.mp4" autoplay muted loop playsinline></video></div>
+    <div class="reel-clip"><video src="videos/reel2c.mp4" autoplay muted loop playsinline></video></div>
+    <div class="reel-clip"><video src="videos/reel3c.mp4" autoplay muted loop playsinline></video></div>
+    <div class="reel-clip"><video src="videos/reel4c.mp4" autoplay muted loop playsinline></video></div>
+    <div class="reel-clip"><video src="videos/reel5c.mp4" autoplay muted loop playsinline></video></div>
   </div>
 </section>
 
@@ -512,26 +531,6 @@ const obs = new IntersectionObserver(entries => {
 }, {threshold: 0.4});
 slides.forEach(s => obs.observe(s));
 
-// Lazy-load reels + autoplay muted cuando el slide entra en vista
-const redesSection = document.getElementById('s-redes');
-if (redesSection) {
-  let reelsLoaded = false;
-  new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !reelsLoaded) {
-      reelsLoaded = true;
-      redesSection.querySelectorAll('iframe[data-src]').forEach(f => {
-        // Carga con autoplay=1; el browser lo silencia automáticamente si no hubo interacción previa
-        f.src = f.dataset.src;
-        // Intento secundario: postMessage para disparar play dentro del iframe
-        f.addEventListener('load', () => {
-          try {
-            f.contentWindow.postMessage(JSON.stringify({ action: 'play', value: 1 }), '*');
-          } catch(e) {}
-        }, { once: true });
-      });
-    }
-  }, { threshold: 0.2 }).observe(redesSection);
-}
 </script>
 </body>
 </html>
