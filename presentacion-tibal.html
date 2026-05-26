@@ -191,47 +191,22 @@ body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(
 .cpill { font-size: clamp(14px,1.5vw,18px); background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: 24px; padding: 10px 22px; color: rgba(253,250,245,0.7); }
 
 /* REDES */
-.s-redes { background: var(--dark); }
-.redes-head { display: flex; align-items: center; gap: 20px; margin-bottom: 3vh; flex-wrap: wrap; }
-.ig-badge { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); border-radius: 12px; padding: 7px 16px; font-size: clamp(13px,1.2vw,16px); color: white; font-weight: 500; letter-spacing: 0.02em; }
-.phone-row { display: flex; gap: clamp(8px,1.2vw,18px); justify-content: center; align-items: flex-end; }
-.phone-wrap { display: flex; flex-direction: column; align-items: center; }
-.phone-wrap:nth-child(1) { animation: phoneFloat 3.2s ease-in-out infinite 0s; }
-.phone-wrap:nth-child(2) { animation: phoneFloat 2.9s ease-in-out infinite 0.5s; }
-.phone-wrap:nth-child(3) { animation: phoneFloat 3.6s ease-in-out infinite 0.2s; transform: scale(1.06); transform-origin: bottom center; }
-.phone-wrap:nth-child(4) { animation: phoneFloat 3.1s ease-in-out infinite 0.8s; }
-.phone-wrap:nth-child(5) { animation: phoneFloat 2.7s ease-in-out infinite 1.1s; }
-@keyframes phoneFloat {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-14px); }
-}
-.phone-wrap:nth-child(3) { animation: phoneFloatCenter 3.6s ease-in-out infinite 0.2s; }
-@keyframes phoneFloatCenter {
-  0%, 100% { transform: scale(1.06) translateY(0px); }
-  50% { transform: scale(1.06) translateY(-14px); }
-}
-.phone-shell {
-  width: clamp(110px,11vw,165px);
-  height: clamp(195px,19.5vw,293px);
-  background: #0a0a0a;
-  border-radius: 26px;
-  border: 2.5px solid rgba(255,255,255,0.18);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.04);
-  overflow: hidden;
-  position: relative;
-}
-.phone-shell::before {
-  content: '';
+.s-redes { background: #0e0e0e; padding: 4vh 0 0 0; justify-content: flex-start; }
+.redes-top { display: flex; align-items: center; gap: 16px; padding: 0 5vw 2vh; flex-wrap: wrap; }
+.redes-top .label { margin-bottom: 0; }
+.ig-badge { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); border-radius: 10px; padding: 6px 14px; font-size: clamp(13px,1.2vw,16px); color: white; font-weight: 500; letter-spacing: 0.02em; }
+.reels-row { display: flex; gap: 3px; width: 100%; flex: 1; min-height: 0; overflow: hidden; }
+.reel-clip { flex: 1; position: relative; overflow: hidden; background: #000; }
+.reel-clip iframe {
   position: absolute;
-  top: 9px; left: 50%;
-  transform: translateX(-50%);
-  width: 34px; height: 5px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 3px;
-  z-index: 10;
+  width: 100%;
+  height: calc(100% + 230px);
+  top: -62px;
+  left: 0;
+  border: none;
   pointer-events: none;
+  display: block;
 }
-.phone-shell iframe { width: 100%; height: 100%; border: none; display: block; }
 </style>
 </head>
 <body>
@@ -408,40 +383,19 @@ body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(
 <!-- 8. REDES -->
 <section class="slide s-redes" id="s-redes">
   <div class="slide-num" style="color:rgba(253,250,245,0.3)">08 / 13</div>
-  <div class="label">Redes sociales</div>
-  <div class="redes-head">
-    <h2 class="title light" style="margin-bottom:0;">Nuestro contenido</h2>
+  <div class="redes-top">
+    <div class="label">Redes sociales</div>
     <div class="ig-badge">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
       @tiendaballerina
     </div>
   </div>
-  <div class="phone-row">
-    <div class="phone-wrap">
-      <div class="phone-shell">
-        <iframe src="https://www.instagram.com/reel/DYr3c4Kubb5/embed/" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"></iframe>
-      </div>
-    </div>
-    <div class="phone-wrap">
-      <div class="phone-shell">
-        <iframe src="https://www.instagram.com/reel/DYp775luHTu/embed/" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"></iframe>
-      </div>
-    </div>
-    <div class="phone-wrap">
-      <div class="phone-shell">
-        <iframe src="https://www.instagram.com/reel/DYXRFycOyTM/embed/" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"></iframe>
-      </div>
-    </div>
-    <div class="phone-wrap">
-      <div class="phone-shell">
-        <iframe src="https://www.instagram.com/reel/DYUlb_QBspz/embed/" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"></iframe>
-      </div>
-    </div>
-    <div class="phone-wrap">
-      <div class="phone-shell">
-        <iframe src="https://www.instagram.com/reel/DXbrkPgjuPl/embed/" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"></iframe>
-      </div>
-    </div>
+  <div class="reels-row">
+    <div class="reel-clip"><iframe data-src="https://www.instagram.com/reel/DYr3c4Kubb5/embed/?autoplay=1" src="" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+    <div class="reel-clip"><iframe data-src="https://www.instagram.com/reel/DYp775luHTu/embed/?autoplay=1" src="" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+    <div class="reel-clip"><iframe data-src="https://www.instagram.com/reel/DYXRFycOyTM/embed/?autoplay=1" src="" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+    <div class="reel-clip"><iframe data-src="https://www.instagram.com/reel/DYUlb_QBspz/embed/?autoplay=1" src="" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+    <div class="reel-clip"><iframe data-src="https://www.instagram.com/reel/DXbrkPgjuPl/embed/?autoplay=1" src="" scrolling="no" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
   </div>
 </section>
 
@@ -551,6 +505,20 @@ const obs = new IntersectionObserver(entries => {
   });
 }, {threshold: 0.4});
 slides.forEach(s => obs.observe(s));
+
+// Lazy-load reels + autoplay cuando el slide entra en vista
+const redesSection = document.getElementById('s-redes');
+if (redesSection) {
+  let reelsLoaded = false;
+  new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !reelsLoaded) {
+      reelsLoaded = true;
+      redesSection.querySelectorAll('iframe[data-src]').forEach(f => {
+        f.src = f.dataset.src;
+      });
+    }
+  }, { threshold: 0.2 }).observe(redesSection);
+}
 </script>
 </body>
 </html>
